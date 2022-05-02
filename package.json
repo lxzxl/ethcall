@@ -1,5 +1,5 @@
 {
-  "name": "ethcall",
+  "name": "@horizon-protocol/ethcall",
   "version": "4.6.5",
   "description": "ethers.js-compatible wrapper around Multicall",
   "main": "lib/index.js",
