@@ -4,10 +4,12 @@ import Coder from 'abi-coder';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Params = any[];
 
+type ReadonlyJsonFragments = ReadonlyArray<JsonFragmentType>;
+
 class Abi {
   static encode(
     name: string,
-    jsonInputs: JsonFragmentType[],
+    jsonInputs: ReadonlyJsonFragments,
     params: Params,
   ): string {
     const abi = [
@@ -22,7 +24,7 @@ class Abi {
   }
 
   static encodeConstructor(
-    jsonInputs: JsonFragmentType[],
+    jsonInputs: ReadonlyJsonFragments,
     params: Params,
   ): string {
     const abi = [
@@ -37,7 +39,7 @@ class Abi {
 
   static decode(
     name: string,
-    jsonOutputs: JsonFragmentType[],
+    jsonOutputs: ReadonlyJsonFragments,
     data: string,
   ): Result {
     const abi = [
@@ -53,6 +55,6 @@ class Abi {
   }
 }
 
-export { Params };
+export { Params, ReadonlyJsonFragments };
 
 export default Abi;

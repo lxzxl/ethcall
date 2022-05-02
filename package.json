@@ -22,10 +22,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ethersproject/abi": "^5.0.0",
-    "@ethersproject/bytes": "^5.0.0",
-    "@ethersproject/contracts": "^5.0.0",
-    "@ethersproject/providers": "^5.0.0",
+    "@ethersproject/abi": "^5.5.0",
+    "@ethersproject/bytes": "^5.5.0",
+    "@ethersproject/contracts": "^5.5.0",
+    "@ethersproject/providers": "^5.5.0",
     "@types/node": "^16.0.0",
     "abi-coder": "^2.1.0"
   },

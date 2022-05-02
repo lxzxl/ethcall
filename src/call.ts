@@ -1,9 +1,9 @@
-import { JsonFragment, JsonFragmentType, Result } from '@ethersproject/abi';
+import { JsonFragment, Result } from '@ethersproject/abi';
 import { hexConcat } from '@ethersproject/bytes';
 import { Contract } from '@ethersproject/contracts';
 import { BaseProvider } from '@ethersproject/providers';
 
-import Abi, { Params } from './abi';
+import Abi, { ReadonlyJsonFragments, Params } from './abi';
 import deploylessMulticallAbi from './abi/deploylessMulticall.json';
 import deploylessMulticall2Abi from './abi/deploylessMulticall2.json';
 import deploylessMulticall3Abi from './abi/deploylessMulticall3.json';
@@ -28,8 +28,8 @@ interface Call {
     address: string;
   };
   name: string;
-  inputs: JsonFragmentType[];
-  outputs: JsonFragmentType[];
+  inputs: ReadonlyJsonFragments;
+  outputs: ReadonlyJsonFragments;
   params: Params;
 }
 
